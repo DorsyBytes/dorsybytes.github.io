@@ -1,0 +1,81 @@
+.project-card {
+  background: rgba(255, 255, 255, 0.05); /* translucent background */
+  backdrop-filter: blur(10px); /* glass blur */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, rgba(0, 119, 255, 0.2), rgba(0, 224, 255, 0.2));
+  }
+}
+
+/* Project Image */
+.project-image {
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+  width: 100%;
+  height: auto;
+
+  .project-card:hover & {
+    transform: scale(1.05);
+  }
+}
+
+/* Project Name */
+.project-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #0077ff, #00e0ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.5s ease;
+
+  &:hover {
+    background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Tech Badges */
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  .badge {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+  }
+}
+
+/* Description & Date */
+.muted {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.updated-date {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: auto;
+  display: block;
+}

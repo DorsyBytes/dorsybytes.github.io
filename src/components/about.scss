@@ -1,0 +1,39 @@
+/* About Card */
+#about .card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, rgba(0, 119, 255, 0.2), rgba(0, 224, 255, 0.2));
+  }
+}
+
+/* Text inside the About Card */
+#about p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Skill Badges */
+#about .badge {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #fff;
+  margin: 0.25rem;
+  display: inline-block;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(90deg, #0077ff, #00e0ff);
+  }
+}
